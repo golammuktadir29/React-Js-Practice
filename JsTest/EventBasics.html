@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js-Test</title>
+  </head>
+  <body>
+    <form action="">
+      <input type="text" name="" id="test" placeholder="Input the text" />
+      <button type="submit" id="button">Submit</button>
+    </form>
+
+    <script>
+      let textArea = document.querySelector("#test");
+      let button = document.querySelector("#button");
+
+      textArea.addEventListener("change", (event) => {
+        event.preventDefault();
+        console.log(event.value); // will throw undefined
+
+        console.log(event.target.value); //will print the value
+
+        console.dir(event);
+      });
+    </script>
+  </body>
+</html>
